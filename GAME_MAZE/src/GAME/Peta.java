@@ -5,11 +5,44 @@
  */
 package GAME;
 
+import java.io.File;
+import java.util.ArrayList;
+import javax.swing.JPanel;
+
 /**
  *
  * @author W I N D O W S 1 0
  */
-public class Peta {
+public class Peta extends JPanel {
+    
+    private File AlamatPeta;
+    private ArrayList AllPerintah = new ArrayList();
+    private ArrayList Tembok = new ArrayList();
+    private ArrayList Bola = new ArrayList();
+    private ArrayList Map = new ArrayList();
+    private Pemain sokoban;
+    private int Lebar = 0;
+    private int Tinggi = 0;
+    private int Jarak = 20;
+
+    public Peta(File file) {
+        
+        setPeta(file);
+    }
+
+    public int getLebar() {
+        return Lebar;
+    }
+
+    public int getTinggi() {
+        return Tinggi;
+    }
+
+    private void setPeta(File file) {
+        
+    }
+    
+    
     
     
     
