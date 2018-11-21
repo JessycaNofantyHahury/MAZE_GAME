@@ -6,6 +6,8 @@
 package GAME;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 
@@ -14,7 +16,7 @@ import javax.swing.JPanel;
  * @author W I N D O W S 1 0
  */
 public class Peta extends JPanel {
-    
+
     private File AlamatPeta;
     private ArrayList AllPerintah = new ArrayList();
     private ArrayList Tembok = new ArrayList();
@@ -26,7 +28,7 @@ public class Peta extends JPanel {
     private int Jarak = 20;
 
     public Peta(File file) {
-        
+
         setPeta(file);
     }
 
@@ -38,12 +40,17 @@ public class Peta extends JPanel {
         return Tinggi;
     }
 
-    private void setPeta(File file) {
-        
+    public void setPeta(File file) {
+
+        try {
+            if (file != null) {
+                FileInputStream input = new FileInputStream(file);
+                AlamatPeta = file;
+                int posisiX = 0;// posisi awal
+                int posisiY = 0;// posisi awal
+               
+
+            }
+        }
     }
-    
-    
-    
-    
-    
 }
