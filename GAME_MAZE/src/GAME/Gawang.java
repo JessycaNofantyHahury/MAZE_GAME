@@ -7,11 +7,11 @@ package GAME;
 
 /**
  *
- * @author W I N D O W S 1 0
+ * @author SandraPc
  */
-class Pemain {
+class Gawang {
 
-    Pemain(int PosisiX, int PosisiY) {
+    Gawang(int PosisiX, int PosisiY) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
