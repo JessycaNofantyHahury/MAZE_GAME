@@ -121,4 +121,9 @@ public class Peta extends JPanel {
         return false;
          
      }
+     
+     private boolean cekBolaTabrakBola(Pixel objek, String input) {
+        return false;
+         
+     }
 }
