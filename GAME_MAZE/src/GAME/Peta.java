@@ -5,14 +5,16 @@
  */
 package GAME;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import javax.swing.JPanel;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -90,6 +92,33 @@ public class Peta extends JPanel {
         } catch (IOException ex) {
             Logger.getLogger(Peta.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        //tempat gambar
+        g.setColor(new Color(255, 255, 255));//set panel warna putih
+        g.fillRect(0, 0, this.getLebar(), this.getTinggi());//set  tinggi lebar sesuai ....
+        Map.addAll(Tembok);
+        Map.addAll(Gawang);
+        Map.addAll(Bola);
+        Map.add(sokoban);
+        for (int i = 0; i < Map.size(); i++) {
+            if (Map.get(i) != null) {
+                Pixel item = (Pixel) Map.get(i);
+                g.drawImage(item.getImage(), item.getPosisix(), item.getPisisiy(), this);
+            }
+        }
     }
     
+     public void PerintahTukGerak(String input) {
+//        String in[] = input.split(" ");
+
+}
+     private boolean CekObjekTabrakTembok(Pixel pemain, String input) {
+        return false;
+         
+     }
 }
