@@ -129,7 +129,7 @@ public class Peta extends JPanel {
                          }else if(cekBolaPemainTabrakTembok("u")){
                              return;
                          }else{
-                             //sokoban;
+                             //sokoban
                              repaint();
                          }
                          
@@ -141,6 +141,18 @@ public class Peta extends JPanel {
 
 }
      private boolean CekObjekTabrakTembok(Pixel pemain, String input) {
+          boolean bantu = false;
+        if (input.equalsIgnoreCase("l")) {
+            for (int i = 0; i < Tembok.size(); i++) {
+                Tembok wall = (Tembok) Tembok.get(i);//ambil posisi tembok
+                if (pemain.PosisiKiriObjek(wall)) {
+                    bantu = true;
+                    break;
+                }
+            }
+            
+            
+         
         return false;
          
      }

@@ -54,6 +54,10 @@ class Pixel {
     public void setJarak(int Jarak) {
         this.Jarak = Jarak;
     }
+
+    boolean PosisiKiriObjek(Tembok wall) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
