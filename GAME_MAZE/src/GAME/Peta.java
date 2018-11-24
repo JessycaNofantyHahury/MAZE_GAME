@@ -114,9 +114,29 @@ public class Peta extends JPanel {
     }
     
      public void PerintahTukGerak(String input) {
-         String in[] = input.split(" ");
-         if (true) {
+         String inp[] = input.split(" ");
+         if (inp.length > 2) {
+            JOptionPane.showMessageDialog(null, "junlah kata lebih dari 2");
              
+         }else if (inp.length == 2) {
+             if(inp[0].matches("[udrlz]")){
+                 AllPerintah.add(input);
+                 if (inp[0].equalsIgnoreCase("u")) {
+                     for (int i = 0; i < Integer.parseInt(String.valueOf(inp[1])); i++) {
+                    if (CekObjekTabrakTembok(sokoban, "u")) {
+                             return;
+                             
+                         }else if(cekBolaPemainTabrakTembok("u")){
+                             return;
+                         }else{
+                             //sokoban;
+                             repaint();
+                         }
+                         
+                     }
+                     
+                 }
+             }
          }
 
 }
@@ -129,4 +149,22 @@ public class Peta extends JPanel {
         return false;
          
      }
+     private boolean cekBolaPemainTabrakTembok(String input){
+         return false;
+     }
+     public void isCompleted(){
+         
+     }
+     public void restartLevel(){
+         
+     }
+     public String getPerintah(){
+         return  ;
+     }
+     public boolean cekBolaKembali(String input){
+         return ;
+     }
+         public void kembali(){
+             
+         }   
 }
