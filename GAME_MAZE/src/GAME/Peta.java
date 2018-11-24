@@ -114,7 +114,10 @@ public class Peta extends JPanel {
     }
     
      public void PerintahTukGerak(String input) {
-//        String in[] = input.split(" ");
+         String in[] = input.split(" ");
+         if (true) {
+             
+         }
 
 }
      private boolean CekObjekTabrakTembok(Pixel pemain, String input) {
