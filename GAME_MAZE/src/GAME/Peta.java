@@ -45,7 +45,7 @@ public class Peta extends JPanel {
         return Tinggi;
     }
 
-    public void setPeta(File file)  {
+    public void setPeta(File file) {
 
         try {
             if (file != null) {
@@ -112,36 +112,37 @@ public class Peta extends JPanel {
             }
         }
     }
-    
-     public void PerintahTukGerak(String input) {
-         String inp[] = input.split(" ");
-         if (inp.length > 2) {
-            JOptionPane.showMessageDialog(null, "junlah kata lebih dari 2");
-             
-         }else if (inp.length == 2) {
-             if(inp[0].matches("[udrlz]")){
-                 AllPerintah.add(input);
-                 if (inp[0].equalsIgnoreCase("u")) {
-                     for (int i = 0; i < Integer.parseInt(String.valueOf(inp[1])); i++) {
-                    if (CekObjekTabrakTembok(sokoban, "u")) {
-                             return;
-                             
-                         }else if(cekBolaPemainTabrakTembok("u")){
-                             return;
-                         }else{
-                             //sokoban
-                             repaint();
-                         }
-                         
-                     }
-                     
-                 }
-             }
-         }
 
-}
-     private boolean CekObjekTabrakTembok(Pixel pemain, String input) {
-          boolean bantu = false;
+    public void PerintahTukGerak(String input) {
+        String inp[] = input.split(" ");
+        if (inp.length > 2) {
+            JOptionPane.showMessageDialog(null, "junlah kata lebih dari 2");
+
+        } else if (inp.length == 2) {
+            if (inp[0].matches("[udrlz]")) {
+                AllPerintah.add(input);
+                if (inp[0].equalsIgnoreCase("u")) {
+                    for (int i = 0; i < Integer.parseInt(String.valueOf(inp[1])); i++) {
+                        if (CekObjekTabrakTembok(sokoban, "u")) {
+                            return;
+
+                        } else if (cekBolaPemainTabrakTembok("u")) {
+                            return;
+                        } else {
+                            //sokoban
+                            repaint();
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    private boolean CekObjekTabrakTembok(Pixel pemain, String input) {
+        boolean bantu = false;
         if (input.equalsIgnoreCase("l")) {
             for (int i = 0; i < Tembok.size(); i++) {
                 Tembok wall = (Tembok) Tembok.get(i);//ambil posisi tembok
@@ -150,18 +151,50 @@ public class Peta extends JPanel {
                     break;
                 }
             }
-            
-            
-         
-        return false;
-         
-     }
+
+            return false;
+
+        }
      
-     private boolean cekBolaTabrakBola(Pixel objek, String input) {
-        return false;
-         
-     }
-     private boolean cekBolaPemainTabrakTembok(String input){
+     
+
+    
+
+    private boolean cekBolaTabrakBola(Pixel pemain, String input) {
+        boolean bantu = false;
+        if (input.equalsIgnoreCase("1")) {
+            for (int i = 0; i < Tembok.size(); i++) {
+                Tembok wall = (Tembok) Tembok.get(i);
+                if (pemain.PosisiKiriObjek(wall)) {
+                    bantu = true;
+                    break;
+
+                }
+
+            }
+        } else if (input.equalsIgnoreCase("r")) {
+            for (int i = 0; i < Tembok.size(); i++) {
+                Tembok wall = (Tembok) Tembok.get(i);
+                //     if (pemain.pos(wall)) {
+                bantu = true;
+                break;
+            }
+        } else if (input.equalsIgnoreCase("d")) {
+            for (int i = 0; i < tembok.size() i++) {
+                  Tembok wall = (Tembok) Tembok.get(i);
+                //     if (pemain.pos(wall)) {
+                bantu = true;
+                break;
+
+            }
+
+        }
+    
+    return bantu;
+
+}
+}
+private boolean cekBolaPemainTabrakTembok(String input){
          return false;
      }
      public void isCompleted(){
