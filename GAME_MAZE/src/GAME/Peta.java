@@ -219,7 +219,37 @@ public class Peta extends JPanel {
     }
 
     private boolean cekBolaPemainTabrakTembok(String input) {
-        return false;
+        boolean bantu = false;
+        if (input.equalsIgnoreCase("1")) {
+            for (int i = 0; i < bola.size(); i++) {
+                Bola boll = (Bola) bola.get(i);
+                if (sokoban.PosisiKiriObjek(boll)) {
+                    if (cekBolaTabrakBola(boll, "1")) {
+                        bantu = true;
+                        break;
+
+                    }else if (CekObjekTabrakTembok(boll, "1")){
+                        bantu = true ;
+                        break;
+                        
+                    }else {
+                    //    boll.Gerak(-jarak, 0);
+                        isCompleted();
+                        
+                    }
+                }
+
+            }
+
+        }else if (input.equalsIgnoreCase("r")){
+            for (int i = 0; i < bola.size(); i++) {
+            //    Bola boll =(Bola)boll.ge
+                if (sokoban.Posisi) {
+                    
+                }
+                
+            }
+        }
     }
 
     public void isCompleted() {
