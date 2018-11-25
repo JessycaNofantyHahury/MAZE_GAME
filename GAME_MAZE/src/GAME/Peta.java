@@ -228,32 +228,45 @@ public class Peta extends JPanel {
                         bantu = true;
                         break;
 
-                    }else if (CekObjekTabrakTembok(boll, "1")){
-                        bantu = true ;
+                    } else if (CekObjekTabrakTembok(boll, "1")) {
+                        bantu = true;
                         break;
-                        
-                    }else {
-                    //    boll.Gerak(-jarak, 0);
+
+                    } else {
+                        //    boll.Gerak(-jarak, 0);
                         isCompleted();
-                        
+
                     }
                 }
 
             }
 
-        }else if (input.equalsIgnoreCase("r")){
+        } else if (input.equalsIgnoreCase("r")) {
             for (int i = 0; i < bola.size(); i++) {
-            //    Bola boll =(Bola)boll.ge
+                //    Bola boll =(Bola)boll.ge
                 if (sokoban.Posisi) {
-                    
+
                 }
-                
+
             }
         }
     }
 
     public void isCompleted() {
-
+        int jumlahBola = bola.size();
+        int gol = 0;
+        for (int i = 0; i < bola.size(); i++) {
+            Bola bol = (Bola) bola.get(i);
+            for (int j = 0; j < gawang.size(); j++) {
+                Gawang gwg = (Gawang) gawang.get(j);
+                if (bol.getPosisiX() == gwg.getPosisiX() && bol.getPosisiY() == gwg.getPosisiY()) {
+                    gol += 1;
+                }
+            }
+        }
+        if (gol == jumlahBola) {
+            JOptionPane.showMessageDialog(null, "Selamat anda berhasil menyelesaikan game ini. ");
+        }
     }
 
     public void restartLevel() {
