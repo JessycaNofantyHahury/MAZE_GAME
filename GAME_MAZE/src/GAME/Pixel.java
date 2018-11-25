@@ -58,6 +58,10 @@ class Pixel {
     boolean PosisiKiriObjek(Tembok wall) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    boolean PosisiKiriObjek(Bola bol) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
