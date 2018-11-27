@@ -7,11 +7,8 @@ package GAME;
 
 /**
  *
- * @author SandraPc
+ * @author W I N D O W S 1 0
  */
-public class Tembok extends Pixel{
-    public Tembok (int x, int y){
-        super (x,y);
-           }
+public class Sokoban {
     
 }

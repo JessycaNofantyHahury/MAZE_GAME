@@ -9,10 +9,13 @@ package GAME;
  *
  * @author SandraPc
  */
-class Bola {
+class Bola extends Pixel{
 
-    Bola(int posisiX, int posisiY) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public Bola(int x, int y) {
+        
+        super(x, y);
+        
+        
+   }
     
 }

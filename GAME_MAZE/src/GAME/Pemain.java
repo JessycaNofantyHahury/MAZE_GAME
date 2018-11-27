@@ -9,10 +9,11 @@ package GAME;
  *
  * @author W I N D O W S 1 0
  */
-class Pemain {
-
-    Pemain(int PosisiX, int PosisiY) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+public class Pemain extends Pixel{
+    public Pemain (int x, int y){
+        super (x,y);
+        
+        
+      }
     
 }

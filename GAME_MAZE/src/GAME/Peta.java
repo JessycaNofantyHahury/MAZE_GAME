@@ -164,7 +164,7 @@ public class Peta extends JPanel {
         } else if (input.equalsIgnoreCase("u")) {
             for (int i = 0; i < tembok.size(); i++) {
                 Tembok wall = (Tembok) tembok.get(i);
-                if (pemain.PosisiAtasObject(wall)) {
+                if (pemain.PosisiAtasObjek(wall)) {
                     bantu = true;
                     break;
 
@@ -199,7 +199,7 @@ public class Peta extends JPanel {
         } else if (input.equalsIgnoreCase("r")) {
             for (int i = 0; i < bola.size(); i++) {
                 Bola wall = (Bola) bola.get(i);
-                if (pemain.PosisiKananObject(wall)) {
+                if (pemain.PosisiKananObjek(wall)) {
                     bantu = true;
                     break;
 
@@ -209,7 +209,7 @@ public class Peta extends JPanel {
         } else if (input.equalsIgnoreCase("d")) {
             for (int i = 0; i < bola.size(); i++) {
                 Bola wall = (Bola) bola.get(i);
-                if (pemain.posisiBawahObject(wall)) {
+                if (pemain.PosisiBawahObjek(wall)) {
                     bantu = true;
                     break;
                 }
@@ -243,13 +243,22 @@ public class Peta extends JPanel {
 
         } else if (input.equalsIgnoreCase("r")) {
             for (int i = 0; i < bola.size(); i++) {
-                //    Bola boll =(Bola)boll.ge
-                if (sokoban.Posisi) {
+                Bola boll =(Bola)bola.get(i); //ambil posisi bola
+                if (sokoban.PosisiKananObjek(boll)) {
+                    if(cekBolaTabrakBola(boll, "r")){
+                        bantu = true;
+                        break;
+                    }else if(CekObjekTabrakTembok(boll, "r")){
+                        bantu = true;
+                        break;
+                   // } el
+                    }
 
                 }
 
             }
         }
+        return false;
     }
 
     public void isCompleted() {

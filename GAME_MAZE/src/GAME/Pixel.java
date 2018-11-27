@@ -48,38 +48,36 @@ public class Pixel {
     }
 
 
-    boolean PosisiKiriObjek(Pixel objek) {
-        if(((this.getPosisix() - Jarak) == objek.getPosisix()) && (this.getPisisiy() == objek.getPisisiy())) {
+    public boolean PosisiKiriObjek(Pixel Objek) {//menentukan posisi kiri pemain
+        if (((this.getPosisix()- Jarak) == Objek.getPosisix()) && (this.getPisisiy()== Objek.getPisisiy())) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
 
-    boolean PosisiKananObjek(Pixel Objek) {
-           if (((this.getPosisix()+ Jarak) == Objek.getPosisix()) && (this.getPisisiy()== Objek.getPisisiy())) {
+    public boolean PosisiKananObjek(Pixel Objek) {//menentukan posisi kanan pemain
+        if (((this.getPosisix()+ Jarak) == Objek.getPosisix()) && (this.getPisisiy()== Objek.getPisisiy())) {
             return true;
         } else {
             return false;
         }
     }
-    public boolean PosisiAtasObjek(Pixel Objek) { // menentukan posisi atas objek
-            if (((this.getPisisiy()- Jarak) == Objek.getPisisiy()) && (this.getPosisix()== Objek.getPosisix())) {
-            return true;
-        } else {
-            return false;
-        }
-    }  
-    
-    public boolean PosisiBawahObjek(Pixel Objek) { // menentukan posisi bawah objek
-            if (((this.getPisisiy()+ Jarak) == Objek.getPisisiy()) && (this.getPosisix()== Objek.getPosisix())) {
-            return true;
-        } else {
-            return false;
-        }
-    }  
-        
-    }
-    
-    
 
+    public boolean PosisiAtasObjek(Pixel Objek) {//menentukan posisi atas objek
+        if (((this.getPisisiy()- Jarak) == Objek.getPisisiy()) && (this.getPosisix()== Objek.getPosisix())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean PosisiBawahObjek(Pixel Objek) {//menentukan posisi bawah objek
+        if (((this.getPisisiy()+ Jarak) == Objek.getPisisiy()) && (this.getPosisix()== Objek.getPosisix())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+}
