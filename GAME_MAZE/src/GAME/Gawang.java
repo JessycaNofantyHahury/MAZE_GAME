@@ -9,10 +9,13 @@ package GAME;
  *
  * @author SandraPc
  */
-class Gawang {
 
-    Gawang(int PosisiX, int PosisiY) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-}
+
+import java.net.URL;
+
+ class Gawang extends Pixel{
+    public Gawang (int x, int y){
+        super (x,y);
+        
+        URL loc = this.getClass().getResource("gawang.jpg");
+}}

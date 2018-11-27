@@ -268,7 +268,7 @@ public class Peta extends JPanel {
             Bola bol = (Bola) bola.get(i);
             for (int j = 0; j < gawang.size(); j++) {
                 Gawang gwg = (Gawang) gawang.get(j);
-                if (bol.getPosisiX() == gwg.getPosisiX() && bol.getPosisiY() == gwg.getPosisiY()) {
+                if (bol.getPosisix()== gwg.getPosisix()&& bol.getPisisiy()== gwg.getPisisiy()) {
                     gol += 1;
                 }
             }
