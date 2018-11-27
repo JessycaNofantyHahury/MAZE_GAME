@@ -11,12 +11,12 @@ import java.awt.Image;
  *
  * @author W I N D O W S 1 0
  */
-class Pixel {
+public class Pixel {
     
-    private int posisix;
-    private int pisisiy;
-    private Image image;
-    private int Jarak =20;
+    private int posisix; // untuk horizontal
+    private int pisisiy; // untuk vertikal
+    private Image image; // untuk menset gambar dalam pixel
+    private int Jarak =20; // jarak uk x dan y dalam pixel
 
     public Pixel(int x, int y) {
         this.posisix = x;
@@ -47,24 +47,39 @@ class Pixel {
         this.image = image;
     }
 
-    public int getJarak() {
-        return Jarak;
+
+    boolean PosisiKiriObjek(Pixel objek) {
+        if(((this.getPosisix() - Jarak) == objek.getPosisix()) && (this.getPisisiy() == objek.getPisisiy())) {
+            return true;
+        }else {
+            return false;
+        }
     }
 
-    public void setJarak(int Jarak) {
-        this.Jarak = Jarak;
+    boolean PosisiKananObjek(Pixel Objek) {
+           if (((this.getPosisix()+ Jarak) == Objek.getPosisix()) && (this.getPisisiy()== Objek.getPisisiy())) {
+            return true;
+        } else {
+            return false;
+        }
     }
+    public boolean PosisiAtasObjek(Pixel Objek) { // menentukan posisi atas objek
+            if (((this.getPisisiy()- Jarak) == Objek.getPisisiy()) && (this.getPosisix()== Objek.getPosisix())) {
+            return true;
+        } else {
+            return false;
+        }
+    }  
+    
+    public boolean PosisiBawahObjek(Pixel Objek) { // menentukan posisi bawah objek
+            if (((this.getPisisiy()+ Jarak) == Objek.getPisisiy()) && (this.getPosisix()== Objek.getPosisix())) {
+            return true;
+        } else {
+            return false;
+        }
+    }  
+        
+    }
+    
+    
 
-    boolean PosisiKiriObjek(Tembok wall) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    boolean PosisiKiriObjek(Bola bol) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    
-    
-    
-}
