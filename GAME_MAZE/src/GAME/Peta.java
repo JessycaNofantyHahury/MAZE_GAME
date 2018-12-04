@@ -283,7 +283,12 @@ public class Peta extends JPanel {
     }
 
     public String getPerintah() {
-        return;
+        String bantu = " ";
+        for (int i = 0; i < AllPerintah.size(); i++) {
+            bantu = bantu + AllPerintah.get(i) + " ";
+            
+        }
+        return bantu;
     }
 
     public boolean cekBolaKembali(String input) {
