@@ -243,15 +243,15 @@ public class Peta extends JPanel {
 
         } else if (input.equalsIgnoreCase("r")) {
             for (int i = 0; i < bola.size(); i++) {
-                Bola boll =(Bola)bola.get(i); //ambil posisi bola
+                Bola boll = (Bola) bola.get(i); //ambil posisi bola
                 if (sokoban.PosisiKananObjek(boll)) {
-                    if(cekBolaTabrakBola(boll, "r")){
+                    if (cekBolaTabrakBola(boll, "r")) {
                         bantu = true;
                         break;
-                    }else if(CekObjekTabrakTembok(boll, "r")){
+                    } else if (CekObjekTabrakTembok(boll, "r")) {
                         bantu = true;
                         break;
-                   // } el
+                        // } el
                     }
 
                 }
@@ -268,7 +268,7 @@ public class Peta extends JPanel {
             Bola bol = (Bola) bola.get(i);
             for (int j = 0; j < gawang.size(); j++) {
                 Gawang gwg = (Gawang) gawang.get(j);
-                if (bol.getPosisix()== gwg.getPosisix()&& bol.getPisisiy()== gwg.getPisisiy()) {
+                if (bol.getPosisix() == gwg.getPosisix() && bol.getPisisiy() == gwg.getPisisiy()) {
                     gol += 1;
                 }
             }
@@ -286,13 +286,77 @@ public class Peta extends JPanel {
         String bantu = " ";
         for (int i = 0; i < AllPerintah.size(); i++) {
             bantu = bantu + AllPerintah.get(i) + " ";
-            
+
         }
         return bantu;
     }
 
     public boolean cekBolaKembali(String input) {
-        return;
+        if (input == "r") {
+            for (int i = 0; i < bola.size(); i++) {
+                Bola boll = (Bola) bola.get(i);
+                if (sokoban.PosisiKiriObjek(boll)) {
+                    for (int j = 0; j < bola.size(); j++) {
+                        Bola item = (Bola) bola.get(j);
+                        if (!boll.equals(item)) {
+                            if (boll.PosisiKiriObjek(item)) {
+                                return true;
+                            }
+                        }
+                        if (CekObjekTabrakTembok(item, "r")) {
+                            return true;
+
+                        }
+
+                    }
+                    boll.Gerak(Jarak, 0);
+                    isCompleted();
+                }
+
+            }
+            return false;
+        } else if (input == "1") {
+            for (int i = 0; i < bola.size(); i++) {
+                Bola boll = (Bola) bola.get(i);
+                if (sokoban.PosisiKananObjek(boll)) {
+                    for (int j = 0; j < bola.size(); j++) {
+                        Bola item = (Bola) bola.get(j);
+                        if (!boll.equals(item)) {
+                            if (boll.PosisiKananObjek(item)) {
+                                return true;
+
+                            }
+                        }
+                        if (CekObjekTabrakTembok(item, "1")) {
+                            return true;
+                        }
+                    }
+                    boll.Gerak(-Jarak, 0);
+                    isCompleted();
+                }
+            }
+            return false;
+        } else if (input == "u") {
+            for (int i = 0; i < bola.size(); i++) {
+                Bola boll = (Bola) bola.get(i);
+                if (sokoban.PosisiBawahObjek(boll)) {
+                    for (int j = 0; j < bola.size(); j++) {
+                        Bola item = (Bola) bola.get(j);
+                        if (!boll.equals(item)) {
+                            if (boll.PosisiBawahObjek(item)) {
+                                return true;
+                            }
+                        }
+                        if (CekObjekTabrakTembok(item, "u")) {
+                            return true;
+                       }
+                    }
+                    boll.Gerak(0, -Jarak);
+                    isCompleted();
+                }
+            }
+        }
+        return false;
     }
 
     public void kembali() {
