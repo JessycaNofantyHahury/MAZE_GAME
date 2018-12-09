@@ -349,10 +349,31 @@ public class Peta extends JPanel {
                         }
                         if (CekObjekTabrakTembok(item, "u")) {
                             return true;
-                       }
+                        }
                     }
                     boll.Gerak(0, -Jarak);
                     isCompleted();
+                }
+            }
+
+        } else if (input == "d") {
+            for (int i = 0; i < bola.size(); i++) {
+                Bola boll = (Bola) bola.get(i);
+                if (sokoban.PosisiAtasObjek(boll)) {
+                    for (int j = 0; j < bola.size(); j++) {
+                        Bola item = (Bola) bola.get(j);
+                        if (!boll.equals(item)) {
+                            if (boll.PosisiAtasObjek(item)) {
+                                return true;
+                            }
+                        }
+                        if (CekObjekTabrakTembok(item, "d")) {
+                            return true;
+                        }
+                    }
+                    boll.Gerak(0, Jarak);
+                    isCompleted();
+
                 }
             }
         }
