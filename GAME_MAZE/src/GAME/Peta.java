@@ -381,6 +381,35 @@ public class Peta extends JPanel {
     }
 
     public void kembali() {
+        for (int i = AllPerintah.size()-1; i >= 0; i--) {
+            String input = AllPerintah.get(i).toString();
+            String[] kembali = input.split(" ");
+            if (kembali[0].equalsIgnoreCase(" u ")) {
+                if (CekObjekTabrakTembok(sokoban, " d")) {
+                    return;
+                    
+                } else if (cekBolaKembali(" d")){
+                    return ;
+                } else {
+                    sokoban.Gerak(0, Jarak);
+                    repaint();
+                }
+                break;
+                
+            } else if (kembali[0].equalsIgnoreCase(" d ")){
+                if (CekObjekTabrakTembok(sokoban, " u ")) {
+                    return ;
+                    
+                }else if (cekBolaKembali(" u")){
+                    return ;
+                } else {
+                    sokoban.Gerak(0, -Jarak);
+                    repaint();
+                }
+                break;
+            }
+            
+        }
 
     }
 }
