@@ -381,35 +381,57 @@ public class Peta extends JPanel {
     }
 
     public void kembali() {
-        for (int i = AllPerintah.size()-1; i >= 0; i--) {
+        for (int i = AllPerintah.size() - 1; i >= 0; i--) {
             String input = AllPerintah.get(i).toString();
             String[] kembali = input.split(" ");
             if (kembali[0].equalsIgnoreCase(" u ")) {
                 if (CekObjekTabrakTembok(sokoban, " d")) {
                     return;
-                    
-                } else if (cekBolaKembali(" d")){
-                    return ;
+
+                } else if (cekBolaKembali(" d")) {
+                    return;
                 } else {
                     sokoban.Gerak(0, Jarak);
                     repaint();
                 }
                 break;
-                
-            } else if (kembali[0].equalsIgnoreCase(" d ")){
+
+            } else if (kembali[0].equalsIgnoreCase(" d ")) {
                 if (CekObjekTabrakTembok(sokoban, " u ")) {
-                    return ;
-                    
-                }else if (cekBolaKembali(" u")){
-                    return ;
+                    return;
+
+                } else if (cekBolaKembali(" u")) {
+                    return;
                 } else {
                     sokoban.Gerak(0, -Jarak);
                     repaint();
                 }
                 break;
+            } else if (kembali[0].equalsIgnoreCase(" l")) {
+                if (CekObjekTabrakTembok(sokoban, " r ")) {
+                    return;
+
+                } else if (cekBolaKembali(" r ")) {
+                    return;
+                } else {
+                    sokoban.Gerak(Jarak, 0);
+                    repaint();
+                }
+                break;
+            } else if (kembali[0].equalsIgnoreCase(" r ")) {
+                if (CekObjekTabrakTembok(sokoban, " l ")) {
+                    return;
+
+                } else if (cekBolaKembali(" l ")) {
+                    return;
+                } else {
+                    sokoban.Gerak(-Jarak, 0);
+                    repaint();
+                }
+                break;
             }
-            
         }
 
     }
+
 }
