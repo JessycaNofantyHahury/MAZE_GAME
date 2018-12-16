@@ -35,7 +35,8 @@ public class Peta extends JPanel {
     private int tinggi = 0;
     private int jarak = 20;
 
-    public Peta(File file) {
+ 
+       public Peta(File file) {
         setPeta(file);
     }
 
