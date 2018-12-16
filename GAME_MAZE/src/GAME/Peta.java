@@ -48,7 +48,6 @@ public class Peta extends JPanel {
                 int posisiX = 0;// posisi awal
                 int posisiY = 0;// posisi awal
                 Tembok wall;
-               // Bola b;
                 Pintu a;
                 int data;
                 while ((data = input.read()) != -1) {//untuk membaca file konfigurasi yang kita buat
@@ -71,7 +70,7 @@ public class Peta extends JPanel {
                     } else if (item == '@') {
                         soko = new Pemain(posisiX, posisiY);
                         posisiX += jarak;
-                    } else if (item == '.') {//nilai xy nambah tetapi tidah di hitung
+                    } else if (item == '.') {//nilai x dan y nambah tetapi tidah di hitung
                         posisiX += jarak;
                     }
                     tinggi = posisiY;
@@ -91,7 +90,6 @@ public class Peta extends JPanel {
         g.fillRect(0, 0, this.getLebar(), this.getTinggi());//set  tinggi lebar sesuai ....
         map.addAll(tembok);
         map.addAll(gawang);
-       // map.addAll(bola);
         map.add(soko);
         for (int i = 0; i < map.size(); i++) {
             if (map.get(i) != null) {
@@ -202,7 +200,8 @@ public class Peta extends JPanel {
                     break;
                 }
             }
-        } else if (input.equalsIgnoreCase("d")) {
+        }
+         else if (input.equalsIgnoreCase("d")) {
             for (int i = 0; i < tembok.size(); i++) {
                 Tembok wall = (Tembok) tembok.get(i);//ambil posisi tembok
                 if (pemain.PosisiBawahObjek(wall)) {

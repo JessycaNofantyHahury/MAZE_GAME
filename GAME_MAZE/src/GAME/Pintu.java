@@ -17,7 +17,9 @@ import javax.swing.ImageIcon;
 public class Pintu extends Pixel{
     public Pintu (int x, int y){
         super (x,y);
+ 
         
+               
         URL loc = this.getClass().getResource("gawang.jpg");
         ImageIcon g = new ImageIcon(loc);
         Image image = g.getImage();
