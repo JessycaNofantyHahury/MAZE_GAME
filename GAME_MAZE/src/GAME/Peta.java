@@ -27,7 +27,6 @@ public class Peta extends JPanel {
     private ArrayList Allperintah = new ArrayList();//menyimpan semua perintah yang dimasukkan
 
     private ArrayList tembok = new ArrayList();
-    //private ArrayList bola = new ArrayList();
     private ArrayList gawang = new ArrayList();
     private ArrayList map = new ArrayList();
     private Pemain soko;
@@ -218,7 +217,6 @@ public class Peta extends JPanel {
     public void restartLevel() {
         Allperintah.clear();//hapus semua perintah yang tersimpan
         gawang.clear();//hapus gawang
-        //bola.clear();//hapus bola
         tembok.clear();//hapus tembok
         map.clear();//hapus map
         setPeta(Alamatpeta);//set ulang gambar peta
