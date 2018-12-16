@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package GAME;
 
 import java.awt.Image;
@@ -11,22 +12,25 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author W I N D O W S 1 0
+ * @author admin
  */
 public class Pemain extends Pixel{
+
+   
     public Pemain (int x, int y){
         super (x,y);
         
-        URL lokasi = this.getClass().getResource("pemain.png");
-        ImageIcon icon = new ImageIcon(lokasi);
-        Image image = icon.getImage();
+        URL loc = this.getClass().getResource("ball.jpg");
+        ImageIcon g = new ImageIcon(loc);
+        Image image = g.getImage();
         this.setImage(image);
-      }
-    public void Gerak(int x, int y){
-        int NX = this.getPosisix()+x;
-        int NY = this.getPisisiy()+y;
-        this.setPosisix(NX);
-        this.setPisisiy(NY);
     }
-    
+    public void Gerak(int x, int y){
+        int nx = this.getPosisiX()+ x;//tergantung langkah yang kita masukkan
+        int ny = this.getPosisiY()+ y;
+        this.setPosisix(nx);
+        this.setPosisiy(ny);
+    }
+
+   
 }

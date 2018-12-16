@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package GAME;
 
 /**
  *
- * @author W I N D O W S 1 0
+ * @author admin
  */
-public class Maze {
-    
- public static String terjemah(String input) {
+public class Maze {//class untuk mengoutputkan langkah yang kita masukkan
+    public static String terjemah(String input) {
         String in[] = input.split(" ");
         if (in.length > 2) { // di gunakan untuk menginputkan huruf langkah pemain
             return "kalimat kepanjangan";
@@ -48,4 +48,3 @@ public class Maze {
         }
     }
 }
-

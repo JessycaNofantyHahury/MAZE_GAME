@@ -12,16 +12,18 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
-import javax.swing.JPanel;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
- * @author W I N D O W S 1 0
+ * @author admin
  */
 public class Peta extends JPanel {
- private File Alamatpeta;//digunakan untuk merestart level
+
+    private File Alamatpeta;//digunakan untuk merestart level
     private ArrayList Allperintah = new ArrayList();//menyimpan semua perintah yang dimasukkan
 
     private ArrayList tembok = new ArrayList();
@@ -94,7 +96,7 @@ public class Peta extends JPanel {
         for (int i = 0; i < map.size(); i++) {
             if (map.get(i) != null) {
                 Pixel item = (Pixel) map.get(i);
-                g.drawImage(item.getImage(), item.getPosisix(), item.getPisisiy(), this);
+                g.drawImage(item.getImage(), item.getPosisiX(), item.getPosisiY(), this);
             }
         }
     }
