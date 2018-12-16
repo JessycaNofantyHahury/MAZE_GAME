@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author admin
+ * @author W I N D O W S 1 0
  */
 public class Peta extends JPanel {
 
@@ -49,7 +49,7 @@ public class Peta extends JPanel {
                 int posisiY = 0;// posisi awal
                 Tembok wall;
                // Bola b;
-                Gawang a;
+                Pintu a;
                 int data;
                 while ((data = input.read()) != -1) {//untuk membaca file konfigurasi yang kita buat
                     char item = (char) data;
@@ -65,7 +65,7 @@ public class Peta extends JPanel {
                         posisiX += jarak;
 
                     } else if (item == 'o') {
-                        a = new Gawang(posisiX, posisiY);
+                        a = new Pintu(posisiX, posisiY);
                         gawang.add(a);
                         posisiX += jarak;
                     } else if (item == '@') {

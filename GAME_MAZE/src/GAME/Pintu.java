@@ -12,10 +12,10 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author admin
+ * @author W I N D O W S 1 0
  */
-public class Gawang extends Pixel{
-    public Gawang (int x, int y){
+public class Pintu extends Pixel{
+    public Pintu (int x, int y){
         super (x,y);
         
         URL loc = this.getClass().getResource("gawang.jpg");

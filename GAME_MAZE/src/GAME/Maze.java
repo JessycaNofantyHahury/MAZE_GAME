@@ -8,7 +8,7 @@ package GAME;
 
 /**
  *
- * @author admin
+ * @author W I N D O W S 1 0
  */
 public class Maze {//class untuk mengoutputkan langkah yang kita masukkan
     public static String terjemah(String input) {

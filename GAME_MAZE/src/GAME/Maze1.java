@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author admin
+ * @author W I N D O W S 1 0
  */
 public class Maze1 extends javax.swing.JFrame {
     ArrayList<String>Allperintah = new ArrayList<>();
